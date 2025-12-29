@@ -18,7 +18,7 @@ on:
   push:
     branches:
       - main
-      workflow_dispatch:
+  workflow_dispatch:
 
 env:  
   CUSTOMER_PROJECT: './src/CustomerSite/CustomerSite.csproj'
