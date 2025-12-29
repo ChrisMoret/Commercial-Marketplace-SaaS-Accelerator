@@ -39,6 +39,10 @@ jobs:
     environment: dev
 
     steps:
+    - name: Azure Login 
+      uses: azure/login@v1
+      with: 
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     # Checkout the repo
     - uses: actions/checkout@v3
