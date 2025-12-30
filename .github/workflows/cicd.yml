@@ -96,11 +96,12 @@ jobs:
             $sqlServerName = "ds02-najtech-sql"
             $sqlServerFullName = $sqlServerName+".database.windows.net"            
             $sqlDatabaseName = "${{ secrets.SQL_DATABASE_NAME }}"
-            # $sqlAdminLogin = "${{ secrets.SQL_ADMIN_LOGIN }}"
+           
             $sqlAdminLogin = "sqladmin"
-            # $sqlAdminPassword = "${{ secrets.SQL_ADMIN_LOGIN_PASSWORD }}"
             $sqlAdminPassword = "cmi2005!ABC"
-            $connectionString = $Connection="Data Source=tcp:"+$sqlServerFullName+",1433;Initial Catalog="+$sqlDatabaseName+";User Id="+$sqlAdminLogin+"@"+$sqlServerFullName+";Password="+$sqlAdminPassword+";"
+            # $connectionString = $Connection="Data Source=tcp:"+$sqlServerFullName+",1433;Initial Catalog="+$sqlDatabaseName+";User Id="+$sqlAdminLogin+"@"+$sqlServerFullName+";Password="+$sqlAdminPassword+";"
+            $connectionString = "Data Source=tcp:"+$sqlServerFullName+",1433;Initial Catalog="+$sqlDatabaseName+";User Id="+$sqlAdminLogin+"@"+$sqlServerFullName+";Password="+$sqlAdminPassword+";"
+
             $publisherPath = "${{env.PUBLISHER_PROJECT_PATH}}/appsettings.Development.json"
             #Set-Content -Path $publisherPath -value "{`"ConnectionStrings`": {`"DefaultConnection`":`"$connectionString`"}}"
             
