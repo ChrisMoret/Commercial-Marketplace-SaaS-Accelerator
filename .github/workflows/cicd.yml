@@ -92,7 +92,8 @@ jobs:
             dotnet tool install --global dotnet-ef --version 8.0.0
             
             Write-Host "Set to the Admin site connection string"
-            $sqlServerName = "${{ secrets.SQL_SERVER_NAME }}"
+            #$sqlServerName = "${{ secrets.SQL_SERVER_NAME }}"
+            $sqlServerName = "ds02-najtech-sql"
             $sqlServerFullName = $sqlServerName+".database.windows.net"            
             $sqlDatabaseName = "${{ secrets.SQL_DATABASE_NAME }}"
             $sqlAdminLogin = "${{ secrets.SQL_ADMIN_LOGIN }}"
