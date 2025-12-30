@@ -100,7 +100,7 @@ jobs:
 
             $connectionString = $Connection="Data Source=tcp:"+$sqlServerFullName+",1433;Initial Catalog="+$sqlDatabaseName+";User Id="+$sqlAdminLogin+"@"+$sqlServerFullName+";Password="+$sqlAdminPassword+";"
             $publisherPath = "${{env.PUBLISHER_PROJECT_PATH}}/appsettings.Development.json"
-            Set-Content -Path $publisherPath -value "{`"ConnectionStrings`": {`"DefaultConnection`":`"$connectionString`"}}"
+            #Set-Content -Path $publisherPath -value "{`"ConnectionStrings`": {`"DefaultConnection`":`"$connectionString`"}}"
             
             Write-Host "Generate sql script"
             $sqlscriptPath = "${{env.SQLSCRIPT_PATH}}/script.sql"
