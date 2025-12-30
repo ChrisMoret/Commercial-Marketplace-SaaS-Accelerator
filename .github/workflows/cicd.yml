@@ -95,8 +95,8 @@ jobs:
             #$sqlServerName = "${{ secrets.SQL_SERVER_NAME }}"
             $sqlServerName = "ds02-najtech-sql"
             $sqlServerFullName = $sqlServerName+".database.windows.net"            
-            $sqlDatabaseName = "${{ secrets.SQL_DATABASE_NAME }}"
-           
+            $sqlDatabaseName = "ds02-najtechAMPSaaSDB"
+                      
             $sqlAdminLogin = "sqladmin"
             $sqlAdminPassword = "cmi2005!ABC"
             # $connectionString = $Connection="Data Source=tcp:"+$sqlServerFullName+",1433;Initial Catalog="+$sqlDatabaseName+";User Id="+$sqlAdminLogin+"@"+$sqlServerFullName+";Password="+$sqlAdminPassword+";"
